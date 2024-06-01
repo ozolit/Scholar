@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm ="clr-namespace:Scholar.ViewModel"
+             x:DataType="vm:SigninViewModel"
+             x:Class="Scholar.Views.Home"
+             Title="Home">
+    
+    
+    <VerticalStackLayout BackgroundColor="AliceBlue" Padding="20" Margin="20">
+
+        <Grid>
+            <!-- Define rows and columns -->
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Add content -->
+
+            <Button Text="Sign In"
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" 
+                    Command="{Binding OpenSigninPageCommand}"/>
+            
+
+            <Button Text="Register"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                    Clicked="OpenApplyPage"/>
+
+            
+        </Grid>
+        
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Scholar.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Scholar.Views"
+    xmlns:admin="clr-namespace:Scholar.Views.Admin"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="False"
+    xmlns:signout="clr-namespace:Scholar"
+    x:DataType="signout:AppShell"
+    BackgroundColor="CadetBlue"
+   
+    >
+
+
+    <FlyoutItem Title="Home">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:Home}"
+        Route="Home" />
+        
+        </FlyoutItem>
+    <FlyoutItem Title="About" FlyoutItemIsVisible="False">
+        <ShellContent
+        
+        ContentTemplate="{DataTemplate local:About}"
+        Route="About" />
+    </FlyoutItem>
+    <FlyoutItem Title="Eligibility" FlyoutItemIsVisible="False">
+        <ShellContent   
+        ContentTemplate="{DataTemplate local:Eligibility}"
+        Route="Eligibility" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Requirements" FlyoutItemIsVisible="False">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:Requirements}"
+        Route="Requirements" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Appy Now" FlyoutItemIsVisible="False">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:ApplyNow}"
+        Route="AppyNow"/>
+    </FlyoutItem>
+
+
+
+    <Shell.FlyoutFooter Route="UserDashboard">
+        <StackLayout Padding="20">
+            <Button Text="Singout"  Clicked="SignOut"/>
+        </StackLayout>
+    </Shell.FlyoutFooter>
+
+    
+</Shell>
+    

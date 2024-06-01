@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Scholar.Views.About"
+             Title="About The Scholarship">
+    <VerticalStackLayout Margin="20" Padding="20">
+        <Label 
+            Text="Welcome We Offer Scholarships to young and tallented young Nigerians"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

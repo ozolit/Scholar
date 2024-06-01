@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Scholar.Views.Admin.AddCountry"
+             xmlns:vm ="clr-namespace:Scholar.ViewModel"
+             xmlns:models ="clr-namespace:Scholar.Model"
+             x:DataType="vm:AddCountryViewModel"
+             >
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always" BackgroundColor="Snow">
+        <VerticalStackLayout Margin="40" WidthRequest="250" Spacing="10" HorizontalOptions="CenterAndExpand">
+            <Label 
+            Text="Add Country" FontSize="22" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+                
+                />
+
+            <Label Text="Country Name" FontSize="18" Margin="5"/>
+            <Entry Placeholder="Enter Country NAme" FontSize="14" Text="{Binding CountryDetails.Name}" TextColor="Black" />
+
+            
+
+
+            <Button
+                Text="Save"  BackgroundColor="CadetBlue" TextColor="White"
+                 Command="{Binding AddCountryToTableCommand}"
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
